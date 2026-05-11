@@ -1,73 +1,76 @@
-# ProXDefend - Advanced System Security Monitor
+# 🛡️ ProXDefend — Advanced System Security Monitor
 
-## Overview
-ProXDefend is a comprehensive system security monitoring application that provides real-time monitoring of processes, network connections, and system activities. It helps identify potential security threats and provides tools for system administrators to maintain system integrity.
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![Platform](https://img.shields.io/badge/Platform-Windows-blue?style=flat)
+![Status](https://img.shields.io/badge/Status-Active-success?style=flat)
 
-## Key Features
+A comprehensive real-time security monitoring tool built with Python that tracks processes, network connections, and file system activity to detect potential threats on Windows systems.
 
-### 1. Process Monitoring
-- Real-time process tracking and analysis
-- Detection of suspicious process behaviors
-- Process crash monitoring
-- Memory usage analysis
-- Process anomaly detection
+---
 
-### 2. Network Security
-- Active network connection monitoring
-- Traffic analysis and anomaly detection
-- Connection classification (suspicious vs. legitimate)
-- Network interface monitoring
-- Socket change tracking
-- Speed testing and network diagnostics
+## 🔍 What it does
 
-### 3. File System Security
-- File scanning and analysis
-- Entropy calculation for detecting encrypted/compressed files
-- File structure analysis
-- Directory change monitoring
-- System integrity checking
+ProXDefend acts like a lightweight SOC (Security Operations Center) on your local machine. It continuously monitors your system and flags suspicious activity across four key areas:
 
-### 4. System Health Monitoring
-- System uptime tracking
-- Memory analysis
-- Startup location monitoring
-- System log analysis
-- Health metrics collection
+| Module | What it monitors |
+|--------|-----------------|
+| 🔄 Process Monitor | Running processes, memory usage, anomalies, crashes |
+| 🌐 Network Security | Active connections, traffic anomalies, suspicious sockets |
+| 📁 File System | File entropy (detects encryption/ransomware), directory changes |
+| 💻 System Health | Uptime, startup locations, system logs |
 
-## Usage
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Windows 10 or later
+- Python 3.8+
+- Administrator privileges (for full functionality)
 
 ### Installation
-1. Clone the repository
-2. Install required dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Set up environment variables in `.env` file
-4. Run the application:
-   ```bash
-   python main.py
-   ```
 
-### Accessing the Interface
-- Main dashboard: `http://localhost:5000`
-- Process monitor: `http://localhost:5000/processes`
-- Network monitor: `http://localhost:5000/network`
-- File scanner: `http://localhost:5000/scanner`
+```bash
+# 1. Clone the repository
+git clone https://github.com/gopikapuu/Proxdefend.git
+cd Proxdefend
 
-## Security Considerations
+# 2. Install dependencies
+pip install -r requirements.txt
 
-### System Requirements
-- Windows 10 or later
-- Administrator privileges for full functionality
-- Python 3.8 or later
-- Sufficient system resources for monitoring
+# 3. Configure environment
+cp .env.example .env  # add your settings
 
-### Best Practices
-1. Run with administrator privileges for full functionality
-2. Regular updates of the application
-3. Monitor system resources
-4. Regular review of security logs
-5. Keep dependencies updated
+# 4. Run the app
+python main.py
+```
 
-## Contributer
-Sanika Pokharkar
+### Dashboard URLs
+| Page | URL |
+|------|-----|
+| Main dashboard | `http://localhost:5000` |
+| Process monitor | `http://localhost:5000/processes` |
+| Network monitor | `http://localhost:5000/network` |
+| File scanner | `http://localhost:5000/scanner` |
+
+---
+
+## 🧠 What I learned
+
+- Real-time system monitoring using Python (`psutil`, `socket`)
+- Entropy analysis to detect potentially malicious or encrypted files
+- Building a GUI dashboard with `gui.py` for live security metrics
+- Network traffic classification and anomaly detection techniques
+
+---
+
+## ⚠️ Disclaimer
+
+This tool is intended for educational and authorized system monitoring only. Always run on systems you own or have explicit permission to monitor.
+
+---
+
+## 👩‍💻 Author
+
+**Gopika PU** — MSc Cyber Forensics  
+[GitHub](https://github.com/gopikapuu) • [LinkedIn](https://www.linkedin.com/in/gopika-pu-7b5659256/)
